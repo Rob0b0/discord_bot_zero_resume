@@ -1,1 +1,1 @@
-worker: node bot2.jshe
+worker: node bot2.json
