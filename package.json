@@ -1,0 +1,13 @@
+{
+    "name": "zero_resume",
+    "version": "1.0.0",
+    "description": "Discord Bot to encourage ZERO",
+    "main": "bot.js",
+    "author": "Rob0b0",
+    "dependencies": {
+        "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+        "discord.js": "^11.5.1",
+        "tenorjs": "^1.0.7",
+        "winston": "^3.2.1"
+    }
+}
