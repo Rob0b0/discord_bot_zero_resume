@@ -23,10 +23,10 @@ client.on('message', msg => {
     }
     if (msg.author.id == 292431364387766272) {
         let chance = Math.random();
-        if (chance < 0.2){
+        if (chance < 0.1){
             msg.channel.send("腹黑<3");
         }
-        else if (chance < 0.4){
+        else if (chance < 0.2){
             msg.channel.send("腹黑闭嘴");
         }
     }
