@@ -22,8 +22,12 @@ client.on('message', msg => {
         msg.channel.send({ files: [rv] });
     }
     if (msg.author.id == 292431364387766272) {
-        if (Math.random() < 0.2){
+        let chance = Math.random();
+        if (chance < 0.2){
             msg.channel.send("腹黑<3");
+        }
+        else if (chance < 0.4){
+            msg.channel.send("腹黑闭嘴");
         }
     }
     if (msg.author.id == 393643156781924363) {
