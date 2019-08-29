@@ -31,7 +31,7 @@ client.on('message', msg => {
         }
     }
     if (msg.author.id == 393643156781924363) {
-        if (Math.random() < 0.4){
+        if (Math.random() < 0.1){
             msg.channel.send("老婆爱你哦❤️");
         }
     }
