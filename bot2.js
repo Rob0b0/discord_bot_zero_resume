@@ -13,21 +13,22 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
+function randomPick(ls){
+    return ls[Math.floor(Math.random() * ls.length)];
+}
+
 const nb = ['厉害', '牛逼', 'nb'];
 client.on('message', msg => {
     // console.log(msg.author.id);
     if (nb.some(r=>msg.content.includes(r))) {
         a = ['./resume.gif', './knowledge.png'];
-        var rv = a[Math.floor(Math.random() * a.length)];
-        msg.channel.send({ files: [rv] });
+        msg.channel.send({ files: [randomPick(a)] });
     }
     if (msg.author.id == 292431364387766272) {
         let chance = Math.random();
         if (chance < 0.1){
-            msg.channel.send("腹黑<3");
-        }
-        else if (chance < 0.2){
-            msg.channel.send("腹黑闭嘴");
+            let nb = ['腹黑<3', '腹黑闭嘴'];
+            msg.channel.send(randomPick(nb));
         }
     }
     if (msg.author.id == 393643156781924363) {
@@ -39,11 +40,10 @@ client.on('message', msg => {
         //extract keywords
         let pos = msg.content.indexOf('-gif');
         let keys = msg.content.slice(23, pos).split('-');
-        let ra = keys[Math.floor(Math.random() * keys.length)];
+        let ra = randomPick(keys);
         Tenor.Search.Random(ra, "1").then(Results => {
             msg.channel.send(Results[0].url);
             // Results.forEach(Post => {
-
             //       console.log(`Item ${Post.id} (Created: ${Post.created}) @ ${Post.url}`);
             // });
         }).catch(console.error);
